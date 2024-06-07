@@ -77,7 +77,7 @@ void main(void)
     P8DS    = 0x00;
     P8SEL   = 0x00;
 
-    volatile float temparatur = 0;
+    volatile float temparature = 0;
     volatile long long int pressure_Pa[4] = {0,0,0,0};
 
     init_i2c_();
@@ -85,7 +85,7 @@ void main(void)
 
     while(1)
     {
-        temparatur = BMP180_get_temp();
+        temparature = BMP180_get_temp();
         pressure_Pa[0] = BMP180_get_press(RES1);
         pressure_Pa[1] = BMP180_get_press(RES2);
         pressure_Pa[2] = BMP180_get_press(RES3);
